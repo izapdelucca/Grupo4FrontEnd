@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+@font-face {
+  font-family: "trend_hm_sansone";
+  src: url("../fonts/trendhmsans/trendhmsans-one-webfont.woff2") format("woff2"),
+    url("../fonts/trendhmsans/trendhmsans-one-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "whitneybook";
+  src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
+    url("../fonts/whitney/whitney-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #ec2b27;
+  --secondary-color: #342d2a;
+  --tertiary-color: #b59153;
+  --txtcolor: #ede9d3;
+  --txtshadow: #ff7979;
+}
+
+.flexMode {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "whitneybook", sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+#menu3 {
+  transition: all 0.3s; /*animação*/
+  top: -300px; /*deixa o menu3 não aparecer*/
+  padding: 15px 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* z-index: 999; */
+  background-color: var(--secondary-color);
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
+}
+#menu3 .logo {
+  max-width: 250px;
+  display: table;
+  margin: auto;
+}
+#menu3 ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+#menu3 ul li {
+  display: inline;
+  list-style-type: none;
+  padding-top: 1.5rem;
+  margin: 15px;
+}
+#menu3 ul li a {
+  display: flex;
+  font-size: 14px;
+  color: var(--primary-color);
+  font-family: "trend_hm_sansone";
+  text-decoration: none;
+}
+#menu3 ul li a.active,
+#menu3 ul li a:hover {
+  color: var(--tertiary-color);
+}
+#menu3.scroll {
+  top: 0;
+}
+#menu3.scroll .logo,
+#menu3.scroll ul {
+  float: left;
+}
+#menu3.scroll .logo {
+  width: 130px;
+}
+#menu3.scroll ul {
+  max-width: 70%;
+  margin-top: 0;
+}
+#menu3.scroll ul li a {
+  font-size: 16px;
+}
+#menu3.on {
+  top: 0;
+}
+.menu2 {
+  display: none;
+}
+
+#slideinicial {
+  padding-top: 70px;
+}
+#menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  /* padding-top: 70px;
+  padding-bottom: 35rem; */
+  /* padding-left: 8rem; */
+  background-image: url(../assets/imgHome/fundo3.3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#menu .container_home {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#menu .logo {
+  max-width: 200px;
+}
+#menu ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  /* width: 100%; */
+  justify-content: end;
+  /* margin: auto;
+  margin-top: 40px; */
+  transition: all 0.3s;
+  gap: 30px;
+}
+#menu ul li {
+  display: inline;
+  list-style-type: none;
+  /* margin: 0 15px; */
+}
+#menu ul li a {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-family: "trend_hm_sansone";
+  text-decoration: none;
+}
+#menu ul li a.active,
+#menu ul li a:hover {
+  color: var(--tertiary-color);
+}
+#menu.scroll {
+  transition: all 0.3s;
+  top: -300px;
+  padding: 15px 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  z-index: 999;
+  background-color: var(--secondary-color);
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
+}
+#menu.scroll .logo,
+#menu.scroll ul {
+  float: left;
+}
+#menu.scroll .logo {
+  width: 130px;
+}
+#menu.scroll ul {
+  max-width: 70%;
+  margin-top: 0;
+}
+#menu.scroll ul li a {
+  font-size: 12px;
+}
+#menu.on {
+  top: 0;
+}
+.menu2 {
+  display: none;
+}
+@media (max-width: 600px) {
+  .menu2 {
+    display: table;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
+  }
+  .menu2 img {
+    width: 100px;
+  }
+  .menu2 button {
+    color: var(--tertiary-color);
+    margin: 4rem;
+    font-size: 15px;
+  }
+  .menu2 li {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+  }
+  .menu2 li a {
+    /*"home, cardápio, reserve agora, contatos, etc"*/
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 14px;
+    padding: 15px 0;
+    text-decoration: none;
+  }
+  #menu,
+  .scroll {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu2 button {
+    color: var(--tertiary-color);
+    margin: 2rem;
+    font-size: 15px;
+  }
+}
