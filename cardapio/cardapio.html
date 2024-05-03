@@ -6,20 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>trabalho</title>
   <link rel="stylesheet" href="cardapio.css" />
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="../sobre/sobre.css" />
 </head>
 
 <body>
 
   <div class="container_cardapio">
 
+    <nav class="nav">
+
+      <a href="../home/home.html" class="logo"><img src="../assets/imgHome/logosite.png"
+          alt="logotipo da marca é um torii, portal encontrado na entrada de santuários xintoístas e templo budistas., "></a>
+
+      <button class="hamburger">
+      </button>
+      <ul class="nav-list">
+        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="../sobre/sobre.html">Sobre</a></li>
+        <li><a href="../cardapio/cardapio.html">Cardapio</a></li>
+        <li><a href="../reservas/reservas.html">Reservas</a></li>
+        <li><a href="../carrinho/carrinho.html">Carrinho</a></li>
+      </ul>
+
+    </nav>
+
+
+
     <div class="navbar_cardapio">
       <img src="../assets/imgCardapio/Itadakimasu.png" />
     </div>
 
     <br />
-    <h1>Promoções</h1>
-    <hr color="black" />
+    <h1 id="hr-texto">Promoções</h1>
+    <hr />
 
     <form id="pedidoForm">
       <div class="container_promocao">
@@ -101,10 +120,10 @@
         </div>
       </div>
 
-      <h1>Bowls Quentes</h1>
-      <h2>Preço fixo: R$ 29,99</h2>
+      <h1 id="hr-texto">Bowls Quentes</h1>
+      <h2 id="hr-texto">Preço fixo: R$ 29,99</h2>
 
-      <hr color="black" />
+      <hr />
 
       <div class="container_bowls">
         <div class="bloco_bowls">
@@ -222,9 +241,9 @@
         </div>
       </div>
 
-      <h1>Pokes</h1>
-      <h2>Preço fixo: R$ 35,99</h2>
-      <hr color="black" />
+      <h1 id="hr-texto">Pokes</h1>
+      <h2 id="hr-texto">Preço fixo: R$ 35,99</h2>
+      <hr />
 
       <div class="container_pokes">
         <div class="bloco_pokes">
@@ -384,16 +403,33 @@
         </div>
 
       </div>
-      <button type="submit">Adicionar ao Carrinho</button>
-      <button type="button" onclick="window.location.href='../carrinho/carrinho.html'" class="link-carrinho-button">Veja
-        seu
-        Carrinho</button>
+      <div class="botao-pedido">
+        <button type="submit">Adicionar ao Carrinho</button>
+        <button type="button" onclick="window.location.href='../carrinho/carrinho.html'"
+          class="link-carrinho-button">Veja
+          seu
+          Carrinho</button>
         <button type="button" onclick="window.location.href='../home/home.html'" class="link-carrinho-button">
           Voltar para Home</button>
+      </div>
     </form>
+    <hr>
+    <div class="footer">
+      <div class="footer-texto">
+        <p>Projeto Final de FrontEnd-Essencial</p>
+        <p>Grupo04 - Gabi Bastos, Izabella Prandino de Lucca, Leandro Tilio, Vittorio Fassano e Rafaela Beber
+        </p>
+      </div>
+      <div class="footer-media">
+        <a href="https://github.com/izapdelucca/Grupo4FrontEnd" target="_blank">
+          <img src="../assets/imgLocal/iconGitHub.png" alt="icone do gitHub" width="50px" height="50px">
+        </a>
+      </div>
+    </div>
+
   </div>
 
-
+  <script defer src="../cardapio/menuCardapio.js"></script>
   <script defer src="cardapio.js"></script>
 </body>
 

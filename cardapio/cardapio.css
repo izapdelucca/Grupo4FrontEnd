@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,47 +6,92 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: black;
+
 }
+
+:root {
+    --primary-color: #ec2b27;
+    --secondary-color: #342d2a;
+    --tertiary-color: #b59153;
+    --quaternary-color: #851b19;
+    --txtcolor: #f1d096;
+    --txtshadow: #ff7979;
+    --txtcolor2: #ede9d3;
+}
+
+
+
+@font-face {
+    font-family: "whitneybook";
+    src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
+        url("../fonts/whitney/whitney-book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 .navbar_cardapio img {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 1880px; /* Defina a largura máxima da imagem */
+    max-width: 1880px;
+    /* Defina a largura máxima da imagem */
     position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.container_cardapio{
-    background-color: aliceblue;
+#hr-texto {
+    font-family: 'whitneybook';
+    color: var(--txtcolor2);
+    margin-left: 3%;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+hr {
+    background-color: var(--txtcolor2);
+    color: var(--txtcolor2);
+    height: 3px;
+    margin-inline: 3%;
+}
+
+.container_cardapio {
+    background-color: var(--secondary-color);
 }
 
 /* COMBINADOS DE PROMOÇÕES */
 
-.container_promocao{
+.container_promocao {
     display: flex;
     padding: 50px;
     justify-content: space-around;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
 }
+
 .bloco_promocao {
     display: flex;
-    background-color: #e6f2fa;
-    border: 3px solid #e6f2fa;
+    background-color: var(--txtcolor2);
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
     margin-bottom: 100px;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
-.imagem_promocao img{
-    border: 3px solid #e6f2fa;
+
+.imagem_promocao img {
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
     width: 300px;
     height: 300px;
 }
-.texto_promocao p{
+
+.texto_promocao p {
     word-wrap: break-word;
     width: 200px;
     display: flex;
@@ -54,32 +99,34 @@
 
 /* BOWLS QUENTES */
 
-.container_bowls{
+.container_bowls {
     display: flex;
     padding: 50px;
     justify-content: space-around;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .bloco_bowls {
     display: flex;
-    background-color: #e6f2fa;
-    border: 3px solid #e6f2fa;
+    background-color: var(--txtcolor2);
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
     margin: 5px;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
-.imagem_bowl img{
-    border: 3px solid #e6f2fa;
+
+.imagem_bowl img {
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
     width: 300px;
     height: 300px;
 
 }
-.texto_bowl p{
+
+.texto_bowl p {
     word-wrap: break-word;
     width: 200px;
     display: flex;
@@ -87,32 +134,202 @@
 
 /* POKES */
 
-.container_pokes{
+.container_pokes {
     display: flex;
     padding: 50px;
+    padding-bottom: 15px;
     justify-content: space-around;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .bloco_pokes {
     display: flex;
-    background-color: #e6f2fa;
-    border: 3px solid #e6f2fa;
+    background-color: var(--txtcolor2);
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
-.imagem_poke img{
-    border: 3px solid #e6f2fa;
+
+.imagem_poke img {
+    border: 3px solid var(--txtcolor2);
     border-radius: 5%;
     width: 300px;
     height: 300px;
 }
-.texto_poke p{
+
+.texto_poke p {
     word-wrap: break-word;
     width: 200px;
     display: flex;
+}
+
+.botao-pedido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+
+}
+
+.botao-pedido button {
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid var(--txtcolor2);
+    color: var(--txtcolor2);
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: "whitneybook";
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    padding-inline: 15px;
+    margin-inline: 15px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    opacity: 90%;
+    background-color: var(--primary-color);
+    transform: scale(1.15);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-inline: 5%;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    color: var(--txtcolor2);
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: "whitneybook";
+}
+
+@media (max-width: 750px) {
+
+    .footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .footer-media img {
+        margin-block: 15px;
+    }
+
+    .botao-pedido{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .botao-pedido button{
+        margin: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 4;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--secondary-color);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    .nav-list a {
+        font-family: "whitneybook";
+        color: var(--secondary-color);
+        font-weight: 600;
+        font-size: 2rem;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.6s 0.7s;
+    }
+
+    .nav-list li:nth-child(5) a {
+        transition: 0.7s 0.8s;
+    }
+
+    /* Estilos ativos */
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        opacity: 95%;
+        pointer-events: all;
+        z-index: 3;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+        z-index: 4;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+
+    }
+
 }
