@@ -87,7 +87,6 @@ a {
 /*------------------------------------------------------------------------------------------*/
 
 .container {
-  background-color: green;
     width: 20px;
     align-items: center;
     height: 425px;
@@ -103,6 +102,11 @@ a {
     width: 450px;
     margin-left: 30%;
 
+}
+
+.confirmar-button {
+    margin-top: 15px;
+    margin-left: 40%;
 }
 
 .dev2 {
@@ -218,8 +222,6 @@ form {
     align-items: center;
 
 }
-
-
 
 form label {
     display: block;
@@ -369,5 +371,3 @@ form button:hover {
     }
 
 }
-
-/* ------------------------------------------------------------------------------------------ */

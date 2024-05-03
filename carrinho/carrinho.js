@@ -1,75 +1,68 @@
-function getPedidosFromCookie() {
-  const cookieValue = document.cookie
-    .split('; ')
-    .find(row => row.startsWith('pedidos='))
-    ?.split('=')[1];
+document.addEventListener("DOMContentLoaded", function() {
+  const carrinhoContainer = document.getElementById('carrinho');
+  const itensCarrinho = getItensCarrinho();
 
-  if (cookieValue) {
-      return JSON.parse(decodeURIComponent(cookieValue));
+  if (itensCarrinho.length > 0) {
+      renderizaCarrinho(itensCarrinho, carrinhoContainer);
+  } else {
+      carrinhoContainer.innerHTML = "<p>Seu carrinho está vazio!</p>";
   }
-  return [];
-}
 
-
-function exibirPedidosNoCarrinho() {
-  const pedidos = getPedidosFromCookie();
-  const carrinhoDiv = document.getElementById('carrinho');
-  carrinhoDiv.innerHTML = '';  // Limpa conteúdo anterior
-
-  pedidos.forEach(pedido => {
-      const pedidoDiv = document.createElement('div');
-      pedidoDiv.textContent = `${pedido.item} - R$ ${Number(pedido.preco).toFixed(2)}`;
-      carrinhoDiv.appendChild(pedidoDiv);
+  const confirmarPedidoBtn = document.getElementById('confirmarPedido');
+  confirmarPedidoBtn.addEventListener('click', function() {
+      mostrarModalPedido(itensCarrinho);
   });
+});
+
+function getItensCarrinho() {
+  const itens = localStorage.getItem('carrinhoItens');
+  return itens ? JSON.parse(itens) : [];
 }
 
+function renderizaCarrinho(itens, container) {
+  let html = "<div class='list-group'>";
+  itens.forEach(item => {
+      html += `
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">${item.nome}</h5>
+                  <small>R$${item.preco}</small>
+              </div>
+              <button onclick="removerItem('${item.nome}')" class="btn btn-danger btn-sm">Remover</button>
+          </a>
+      `;
+  });
+  html += "</div>";
+  container.innerHTML = html;
+}
 
-
-function exibirModal() {
+function mostrarModalPedido(itens) {
   const modal = document.getElementById('pedidoModal');
-  const pedidoConfirmado = document.getElementById('pedidoConfirmado');
-  const pedidos = getPedidosFromCookie();
-  let mensagem = '<b>Pedido confirmado:</b><br>';
-  let precoTotal = 0;
-  const taxaEntrega = 10;
+  const modalContent = document.getElementById('pedidoConfirmado');
+  let total = 0;
 
-  mensagem += `<br><b>Itens:</b><br>`;
+  // Adiciona o cabeçalho em negrito antes da lista de itens
+  let conteudoModal = `<b>Seu pedido:</b><br><br>`;
 
-  pedidos.forEach(pedido => {
-    mensagem += `${pedido.item} - R$ ${pedido.preco.toFixed(2)}<br>`;
-    precoTotal += pedido.preco;
-  });
+  // Constrói a lista de itens, incluindo o nome e o preço de cada um
+  itens.map(item => {
+      total += parseFloat(item.preco.replace(',', '.'));
+      conteudoModal += `${item.nome} - R$${item.preco}<br>`;
+  }).join("");
 
-  precoTotal += taxaEntrega;
+  // Adiciona o preço total no final da lista
+  conteudoModal += `<br><b>Preço total:</b> R$${total.toFixed(2)}`;
 
-  mensagem += `<br><b>Taxa de Entrega:</b> R$ ${taxaEntrega.toFixed(2)}<br><br>`;
-  mensagem += `<b>Preço Total:</b> R$ ${precoTotal.toFixed(2)}`;
-  pedidoConfirmado.innerHTML = mensagem;
+  // Configura o conteúdo do modal e exibe o modal
+  modalContent.innerHTML = conteudoModal;
   modal.style.display = 'block';
 }
 
-function changePage(page) {
-  window.location.href = page;
+
+function removerItem(nomeItem) {
+  let itens = getItensCarrinho();
+  itens = itens.filter(item => item.nome !== nomeItem);
+  localStorage.setItem('carrinhoItens', JSON.stringify(itens));
+  document.getElementById('carrinho').innerHTML = "";
+  renderizaCarrinho(itens, document.getElementById('carrinho'));
 }
-
-const confirmarPedidoButton = document.getElementById('confirmarPedidoButton');
-confirmarPedidoButton.addEventListener('click', function () {
-  exibirModal();
-  limparPedidos();
-});
-
-function limparPedidos() {
-  document.cookie = 'pedidos=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-}
-
-//BUG: nao adiciona o preco so o nome
-function adicionarAoCarrinho(item) {
-  let pedidos = getPedidosFromCookie();
-  pedidos.push({ item, preco: precosDosItens[item] });
-  document.cookie = `pedidos=${JSON.stringify(pedidos)}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
-}
-
-window.addEventListener('beforeunload', function (event) {
-});
-
-exibirPedidosNoCarrinho();

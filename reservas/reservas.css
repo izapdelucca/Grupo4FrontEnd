@@ -177,6 +177,7 @@ button:hover {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 .modal-content {
@@ -190,7 +191,6 @@ button:hover {
     box-sizing: border-box;
     margin: auto;
 }
-
 
 .close {
     color: #292929;
