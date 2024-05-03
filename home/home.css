@@ -70,6 +70,10 @@ section {
   position: relative;
 }
 
+.icon-menu {
+  font-size: 10px;
+}
+
 div.setaBaixo {
   width: 60px;
   height: 60px;
