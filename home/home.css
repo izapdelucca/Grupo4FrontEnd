@@ -59,12 +59,24 @@ body {
 }
 
 .frase {
+  background-color: rgba(52, 45, 42, 0.5);
+  margin-right: 32rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.frase p {
+  font-family: Stencil Std, fantasy;
   font-size: 25px;
+  margin-top: 20px;
   color: var(--primary-color);
+  opacity: 200%;
 }
 
 section {
-  margin-top: 20rem;
+  margin-top: 10rem;
   width: 100%;
   height: 90vh;
   position: relative;
@@ -82,6 +94,7 @@ div.setaBaixo {
   background-size: contain;
   position: absolute;
   left: 50%;
+  top: auto;
   transform: translateX(-50%);
 
   animation-name: setaBaixo;
@@ -216,7 +229,7 @@ div.setaBaixo {
   margin-left: 0;
 }
 #menu ul li a {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--primary-color);
   font-family: "trend_hm_sansone";
   text-decoration: none;
