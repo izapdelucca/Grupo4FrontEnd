@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="formulario.css"> <!-- Adicionando arquivo CSS externo -->
+    <link rel="stylesheet" href="../sobre/sobre.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="nav">
+
+            <a href="../home/home.html" class="logo"><img src="../assets/imgHome/logosite.png"
+                    alt="logotipo da marca é um torii, portal encontrado na entrada de santuários xintoístas e templo budistas., "></a>
+
+            <button class="hamburger">
+            </button>
+            <ul class="nav-list">
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../sobre/sobre.html">Sobre</a></li>
+                <li><a href="../cardapio/cardapio.html">Cardapio</a></li>
+                <li><a href="../reservas/reservas.html">Reservas</a></li>
+                <li><a href="../carrinho/carrinho.html">Carrinho</a></li>
+                <li><a href="../formulario/formulario.html">Contatos</a></li>
+            </ul>
+
+        </nav>
+
+
+
+        <h1>Faça seu cadastro</h1>
+        <div class="formulario">
+            <form action="cadastro" method="post" id="codastroForm">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" required><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone" required><br>
+
+                <label for="comentario">Deixe sua sugestão para que possamos melhorar nosso trabalho!</label><br>
+                <textarea id="comentario" name="comentario" rows="7" cols="55"
+                    placeholder="Digite seu comentário aqui..."></textarea><br>
+                <div class="div-check-texto">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" id="newsletter">Desejo receber newsletter</label><br>
+                </div>
+                <input type="checkbox" id="politica_privacidade" name="politica_privacidade" required>
+                <label for="politica_privacidade" id="politica_privacidade">Estou de acordo com a Política de
+                    privacidade.</label><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+        </div>
+
+        <hr>
+        <div class="footer">
+            <div class="footer-texto">
+                <p>Projeto Final de FrontEnd-Essencial</p>
+                <p>Grupo04 - Gabriela Bastos, Izabella Prandino de Lucca, Leandro Tilio, Vittorio Fassano e Rafaela
+                    Beber
+                </p>
+            </div>
+            <div class="footer-media">
+                <a href="https://github.com/izapdelucca/Grupo4FrontEnd" target="_blank">
+                    <img src="../assets/imgLocal/iconGitHub.png" alt="icone do gitHub" width="50px" height="50px">
+                </a>
+            </div>
+        </div>
+        <script src="./formulario.js"></script>
+    </div>
+</body>
+
+</html>

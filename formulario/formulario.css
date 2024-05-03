@@ -1,0 +1,213 @@
+body {
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+@font-face {
+    font-family: "whitneybook";
+    src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
+    url("../fonts/whitney/whitney-book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #ec2b27;
+    --secondary-color: #342d2a;
+    --tertiary-color: #b59153;
+    --txtcolor: #ede9d3;
+    --txtshadow: #ff7979;
+}
+
+.container {
+    margin: 0 auto;
+    /* padding: 40px; */
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+
+label{
+    font-family: "whitneybook";
+    font-size: 1rem;
+}
+
+.div-check-texto{
+    display: flex;
+    width: 421px;
+   
+}
+
+.formulario form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="submit"] {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+input[type="submit"] {
+    background-color: #d41b11;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    border: 1px solid var(--txtcolor);
+    background-color: var(--secondary-color);
+}
+
+input[type="checkbox"] {
+    width: auto; 
+    height: 20px;
+    margin-right: 400px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-inline: 5%;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    color: var(--txtcolor);
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: "whitneybook";
+}
+
+hr {
+    margin-top:20px;
+    height: 2px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--txtcolor);
+
+}
+
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        z-index: 4;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--secondary-color);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    .nav-list a {
+        font-family: "whitneybook";
+        color: var(--secondary-color);
+        font-weight: 600;
+        font-size: 2rem;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.6s 0.7s;
+    }
+
+    .nav-list li:nth-child(5) a {
+        transition: 0.7s 0.8s;
+    }
+
+    /* Estilos ativos */
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        opacity: 95%;
+        pointer-events: all;
+        z-index: 3;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+        z-index: 4;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .footer-media img {
+        margin-block: 15px;
+    }
+
+
+}
+
