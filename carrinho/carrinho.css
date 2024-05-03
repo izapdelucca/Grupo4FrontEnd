@@ -84,6 +84,7 @@ a {
     font-family: "Quicksand", sans-serif;
 }
 
+
 /*------------------------------------------------------------------------------------------*/
 
 .container {
@@ -164,7 +165,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #d41b11;
 }
 
 .modal {
@@ -254,6 +255,7 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
 
 /* ------------------------------------------------------------------------------------------ */
 @media (max-width: 750px) {

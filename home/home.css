@@ -65,6 +65,8 @@ body {
   padding-right: 1rem;
   padding-top: 3px;
   padding-bottom: 3px;
+  margin-top: -50px;  
+  
 }
 
 .frase p {
@@ -74,6 +76,8 @@ body {
   color: var(--primary-color);
   text-shadow: var(--quaternary-color);
   opacity: 200%;
+  font-weight: 500;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 section {
@@ -109,14 +113,17 @@ div.setaBaixo {
   0% {
     top: 0px;
   }
+
   100% {
     top: 20px;
   }
 }
 
 #menu3 {
-  transition: all 0.3s; /*animação*/
-  top: -300px; /*deixa o menu3 não aparecer*/
+  transition: all 0.3s;
+  /*animação*/
+  top: -300px;
+  /*deixa o menu3 não aparecer*/
   padding: 15px 0;
   position: fixed;
   display: flex;
@@ -128,11 +135,13 @@ div.setaBaixo {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
 }
+
 #menu3 .logo {
   max-width: 250px;
   display: table;
   margin: auto;
 }
+
 #menu3 ul {
   display: flex;
   width: 100%;
@@ -141,12 +150,14 @@ div.setaBaixo {
   margin-top: 10px;
   transition: all 0.3s;
 }
+
 #menu3 ul li {
   display: inline;
   list-style-type: none;
   padding-top: 1.5rem;
   margin: 15px;
 }
+
 #menu3 ul li a {
   display: flex;
   font-size: 14px;
@@ -154,30 +165,38 @@ div.setaBaixo {
   font-family: "trend_hm_sansone";
   text-decoration: none;
 }
+
 #menu3 ul li a.active,
 #menu3 ul li a:hover {
   color: var(--tertiary-color);
 }
+
 #menu3.scroll {
   top: 0;
 }
+
 #menu3.scroll .logo,
 #menu3.scroll ul {
   float: left;
 }
+
 #menu3.scroll .logo {
   width: 130px;
 }
+
 #menu3.scroll ul {
   max-width: 70%;
   margin-top: 0;
 }
+
 #menu3.scroll ul li a {
   font-size: 16px;
 }
+
 #menu3.on {
   top: 0;
 }
+
 .menu2 {
   display: none;
 }
@@ -185,6 +204,7 @@ div.setaBaixo {
 #slideinicial {
   padding-top: 70px;
 }
+
 #menu {
   display: flex;
   justify-content: space-between;
@@ -209,6 +229,7 @@ div.setaBaixo {
 #menu .logo {
   max-width: 200px;
 }
+
 #menu ul {
   display: flex;
   align-items: center;
@@ -223,12 +244,14 @@ div.setaBaixo {
   transition: all 0.3s;
   gap: 30px;
 }
+
 #menu ul li {
   display: inline;
   list-style-type: none;
   /* margin: 0 15px; */
   margin-left: 0;
 }
+
 #menu ul li a {
   font-size: 17px;
   color: var(--primary-color);
@@ -236,10 +259,12 @@ div.setaBaixo {
   text-decoration: none;
   margin-left: 0;
 }
+
 #menu ul li a.active,
 #menu ul li a:hover {
   color: var(--tertiary-color);
 }
+
 #menu.scroll {
   transition: all 0.3s;
   top: -300px;
@@ -255,27 +280,34 @@ div.setaBaixo {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
 }
+
 #menu.scroll .logo,
 #menu.scroll ul {
   float: left;
 }
+
 #menu.scroll .logo {
   width: 130px;
 }
+
 #menu.scroll ul {
   max-width: 70%;
   margin-top: 0;
   margin-left: 0;
 }
+
 #menu.scroll ul li a {
   font-size: 12px;
 }
+
 #menu.on {
   top: 0;
 }
+
 .menu2 {
   display: none;
 }
+
 @media (max-width: 600px) {
   .menu2 {
     display: table;
@@ -285,19 +317,23 @@ div.setaBaixo {
     background-color: var(--secondary-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.322) !important;
   }
+
   .menu2 img {
     width: 100px;
   }
+
   .menu2 button {
     color: var(--tertiary-color);
     margin: 4rem;
     font-size: 15px;
   }
+
   .menu2 li {
     display: table;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.048);
   }
+
   .menu2 li a {
     /*"home, cardápio, reserve agora, contatos, etc"*/
     display: block;
@@ -307,6 +343,7 @@ div.setaBaixo {
     padding: 15px 0;
     text-decoration: none;
   }
+
   #menu,
   .scroll {
     display: none !important;
