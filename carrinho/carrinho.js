@@ -1,32 +1,29 @@
-//BUG: fazer o preco total dos produtos e mostrar em carrinho e no modal
 function getPedidosFromCookie() {
-  //BUG: nao pega o preco so o item
-  const cookies = document.cookie.split(';');
-  for (let cookie of cookies) {
-    const [name, value] = cookie.trim().split('=');
-    if (name === 'pedidos') {
-      const pedidos = JSON.parse(decodeURIComponent(value)); 
-      return pedidos.map(pedido => {
-        const [item, preco] = pedido.split('|');
-        return { item, preco: parseFloat(preco) }; 
-      });
-    }
+  const cookieValue = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('pedidos='))
+    ?.split('=')[1];
+
+  if (cookieValue) {
+      return JSON.parse(decodeURIComponent(cookieValue));
   }
   return [];
 }
 
+
 function exibirPedidosNoCarrinho() {
   const pedidos = getPedidosFromCookie();
   const carrinhoDiv = document.getElementById('carrinho');
-  carrinhoDiv.innerHTML = '';
+  carrinhoDiv.innerHTML = '';  // Limpa conteúdo anterior
 
   pedidos.forEach(pedido => {
-    const pedidoDiv = document.createElement('div');
-    //BUG: nao exibe o nome do item e seu preço
-    pedidoDiv.textContent = `${pedido.item} - R$ ${pedido.preco.toFixed(2)}`; 
-    carrinhoDiv.appendChild(pedidoDiv);
+      const pedidoDiv = document.createElement('div');
+      pedidoDiv.textContent = `${pedido.item} - R$ ${Number(pedido.preco).toFixed(2)}`;
+      carrinhoDiv.appendChild(pedidoDiv);
   });
 }
+
+
 
 function exibirModal() {
   const modal = document.getElementById('pedidoModal');

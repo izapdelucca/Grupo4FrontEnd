@@ -12,7 +12,7 @@ pedidoForm.addEventListener('submit', function (event) {
 
   document.cookie = `pedidos=${JSON.stringify(pedidosSelecionados)}`;
 
-  window.location.href = "carrinho.html";
+  window.location.href = "../carrinho/carrinho.html";
 });
 
 //BUG: nao consigo adicionar o preco

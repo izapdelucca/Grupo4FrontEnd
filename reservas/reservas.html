@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservas.css">
+    <link rel="stylesheet" href="../sobre/sobre.css">
+    <title>Itadakimasu Sobre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   
+
+</head>
+
+<body>
+    <div class="container-fluid-xl" id="container-geral">
+        <nav class="nav">
+            <a href="/" class="logo">Itadakimasu</a>
+            <ul class="nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Cardapio</a></li>
+                <li><a href="">Reservas</a></li>
+                <li><a href="">Contatos</a></li>
+            </ul>
+            
+        </nav>
+        <div class="dev2">
+            <hr>
+        </div>
+
+        <div class="container">
+            <h1>Faça sua Reserva</h1>
+            <div class="container-reservas">
+                <form action="reservar.html" method="post" id="reservaForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required><br><br>
+
+                    <label for="data">Data da Reserva:</label>
+                    <input type="date" id="data" name="data" required><br><br>
+
+                    <label for="horario">Horário:</label>
+                    <input type="time" id="horario" name="horario" required><br><br>
+
+                    <label for="pessoas">Número de Pessoas:</label>
+                    <input type="number" id="pessoas" name="pessoas" min="1" required><br><br>
+
+                    <label for="ambiente">Ambiente (Salão, Templo, Externo):</label>
+                    <input type="text" id="ambiente" name="ambiente" required><br><br>
+
+                    <button type="submit">Reservar</button>
+                   
+                </form>
+            </div>
+        </div>
+
+        <div id="reservaModal" class="modal">
+            <div class="modal-content">
+                <a href="../home/home.html" class="close">Voltar ao Menu</a>
+                <p id="reservaConfirmada"></p>
+            </div>
+        </div>
+
+        <div class="dev">
+            <hr>
+        </div>
+        <div class="footer">
+            <div class="footer-texto">
+                <p>Projeto Final de FrontEnd-Essencial</p>
+                <p>Grupo04 - Gabi Bastos, Izabella Prandino de Lucca, Leandro Tilio, nome04 e nome05</p>
+            </div>
+            <div class="footer-media">
+                <a href="COLOCAR LINK DO REPOSITORIO">
+                    <img src="../assets/imgLocal/iconGitHub.png" alt="icone do gitHub" width="50px" height="50px">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+   
+    <script defer src="reservas.js"></script>
+    <script defer src="../sobre/sobre.js"></script>
+</body>
+
+</html>
