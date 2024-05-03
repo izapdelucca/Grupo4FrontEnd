@@ -250,115 +250,29 @@ form button:hover {
 }
 
 /* ------------------------------------------------------------------------------------------ */
-@media (max-width: 750px) {
-  .hamburger {
-    display: block;
-    z-index: 4;
+@media (max-width: 600px) {
+  .container {
+    padding-left: 5px;
   }
 
-  .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgb(22, 22, 22);
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
-
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    margin: 0;
-
-    pointer-events: none;
-    z-index: 3;
+  .container h1 {
+    margin-left: 10px;
   }
 
-  .nav-list a {
-    font-family: "whitneybook";
-    font-weight: 600;
-    font-size: 2rem;
-    opacity: 0;
+  .container-reservas {
+    margin-left: 0;
   }
 
-  .nav-list li:nth-child(1) a {
-    transition: 0.5s 0.2s;
+  #reservaForm {
+    padding-left: 0;
   }
 
-  .nav-list li:nth-child(2) a {
-    transition: 0.5s 0.4s;
-  }
-
-  .nav-list li:nth-child(3) a {
-    transition: 0.5s 0.6s;
-  }
-
-  .nav-list li:nth-child(4) a {
-    transition: 0.6s 0.7s;
-  }
-
-  .nav-list li:nth-child(5) a {
-    transition: 0.7s 0.8s;
-  }
-
-  /* Estilos ativos */
-
-  .nav.active .nav-list {
-    clip-path: circle(1500px at 90% -15%);
-    opacity: 95%;
-    pointer-events: all;
-    z-index: 3;
-  }
-
-  .nav.active .nav-list a {
-    opacity: 1;
-  }
-
-  .nav.active .hamburger {
-    position: fixed;
-    top: 26px;
-    right: 16px;
-    border-top-color: transparent;
-    z-index: 4;
-  }
-
-  .nav.active .hamburger::before {
-    transform: rotate(135deg);
-  }
-
-  .nav.active .hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5px;
-  }
-
-  .footer-media img {
-    margin-block: 15px;
-  }
-
-  .foto-texto {
-    flex-wrap: wrap;
-    height: auto;
-    width: auto;
-  }
-
-  .descricao p {
-    padding-inline: 15px;
-    padding-bottom: 15px;
-  }
-
-  .foto {
-    margin-top: 15px;
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form input[type="time"],
+  form button {
+    width: 88%;
   }
 }
-
 /* ------------------------------------------------------------------------------------------ */
