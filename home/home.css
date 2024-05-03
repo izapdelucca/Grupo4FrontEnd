@@ -13,6 +13,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "whitneybook";
   src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
@@ -26,7 +27,8 @@
   --primary-color: #ec2b27;
   --secondary-color: #342d2a;
   --tertiary-color: #b59153;
-  --txtcolor: #ede9d3;
+  --quaternary-color: #851b19;
+  --txtcolor: #f1d096;
   --txtshadow: #ff7979;
 }
 
@@ -254,4 +256,120 @@ body {
     margin: 2rem;
     font-size: 15px;
   }
+}
+
+.welcome {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome_text {
+  padding-left: 150px;
+}
+
+.welcome h3 {
+  font-family: "whitneybook";
+  padding-top: 100px;
+  color: var(--primary-color);
+}
+
+.welcome p {
+  font-family: "trend_hm_sansone";
+  font-size: 16px;
+  padding-top: 20px;
+  margin-right: 5rem;
+  color: var(--txtcolor);
+}
+
+.welcome img {
+  width: 500px;
+  height: 450px;
+  padding-top: 100px;
+  padding-right: 150px;
+  padding-bottom: 70px;
+}
+
+.welcome button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  margin-left: 10rem;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: var(--txtcolor);
+  text-shadow: 0px 0px 3px var(--txtshadow);
+  cursor: pointer;
+}
+
+.welcome button:hover {
+  background-color: var(--quaternary-color);
+  font-weight: 400;
+}
+
+.cardapio {
+  background-color: var(--secondary-color);
+}
+
+.linha1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardapio_text {
+  padding-left: 150px;
+}
+
+.cardapio h3 {
+  font-family: "whitneybook";
+  padding-top: 70px;
+  color: var(--primary-color);
+}
+
+.cardapio p {
+  font-family: "trend_hm_sansone";
+  font-size: 16px;
+  margin-right: 5rem;
+  color: var(--txtcolor);
+}
+
+#img1 {
+  width: 550px;
+  height: 500px;
+  padding-top: 70px;
+  padding-right: 150px;
+  padding-bottom: 40px;
+}
+
+.cardapio button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  margin-left: 10rem;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: var(--txtcolor);
+  text-shadow: 0px 0px 3px var(--txtshadow);
+  cursor: pointer;
+}
+
+.cardapio button:hover {
+  background-color: var(--quaternary-color);
+  font-weight: 400;
+}
+
+#img2 {
+  width: 450px;
+  height: 500px;
+  padding-top: 20px;
+  margin-left: 150px;
+  padding-bottom: 70px;
+}
+
+#img3 {
+  width: 440px;
+  height: 500px;
+  padding-top: 20px;
+  margin-left: 100px;
+  padding-bottom: 70px;
 }
