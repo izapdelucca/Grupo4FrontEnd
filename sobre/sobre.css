@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); */
 
+@font-face {
+    font-family: "whitneybook";
+    src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
+      url("../fonts/whitney/whitney-book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
-    --primary-color: #d41b11;
-    --secondary-color: #000000;
-    --txtcolor: #fffcfb;
+    --primary-color: #ec2b27;
+    --secondary-color: #342d2a;
+    --tertiary-color: #b59153;
+    --txtcolor: #ede9d3;
     --txtshadow: #ff7979;
 }
 
@@ -20,7 +29,7 @@ body {
 }
 
 #container-geral {
-    background-color: rgb(22, 22, 22);
+    background-color: var(--secondary-color);
     position: relative;
 }
 
@@ -32,18 +41,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 75px;
-    background-color: rgb(22, 22, 22);
+    height: 100px;
+    background-color: var(--secondary-color);
     padding-inline: 16px;
     z-index: 2;
 }
 
-.logo {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 800;
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-left: 15px;
+
+.nav img {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
 }
 
 .nav-list {
@@ -54,13 +62,14 @@ a {
     z-index: 3;
 }
 
-.nav-list li a{
+.nav-list li a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
 .nav-list a {
-    font-size: 1.1rem;
+    font-family: "whitneybook";
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--primary-color);
     padding-block: 15px;
@@ -89,7 +98,7 @@ a {
     transition: 0.3s;
 }
 
-.carousel-inner{
+.carousel-inner {
     position: relative;
     z-index: 1;
 }
@@ -97,7 +106,7 @@ a {
 #container-carousel {
     padding-left: 0;
     padding-right: 0;
-    background-color: rgb(22, 22, 22);
+    background-color: var(--secondary-color);
     z-index: 1;
 }
 
@@ -113,7 +122,7 @@ a {
 
     font-size: 1.1rem;
     font-weight: 900;
-    font-family: "Quicksand", sans-serif;
+    font-family: "whitneybook";
     text-align: center;
     margin: 1rem;
 }
@@ -127,7 +136,7 @@ a {
     text-decoration: non;
 }
 
-.containerDevGeral a{
+.containerDevGeral a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +160,7 @@ a {
     color: var(--txtcolor);
     font-size: 1.2rem;
     font-weight: 900;
-    font-family: "Quicksand", sans-serif;
+    font-family: "whitneybook";
 }
 
 .dev hr {
@@ -172,20 +181,27 @@ a {
     border-radius: 20px;
     width: 80%;
     margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .foto-texto:hover {
     opacity: 90%;
     background-color: var(--txtcolor);
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .foto {
     padding: 15px 15px;
 }
 
-.descricao p a{
-    font-family: "Quicksand", sans-serif;
-    color: rgb(22, 22, 22);
+.descricao p a {
+    font-family: "whitneybook";
+    color: var(--secondary-color);
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
@@ -195,7 +211,7 @@ a {
 
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -204,13 +220,13 @@ a {
     padding-bottom: 15px;
 }
 
-.footer p{
+.footer p {
     margin: 0;
     padding: 0;
     color: var(--txtcolor);
     font-size: 1rem;
     font-weight: 900;
-    font-family: "Quicksand", sans-serif;
+    font-family: "whitneybook";
 }
 
 /* ------------------------------------------------------------------------------------------ */
@@ -226,7 +242,7 @@ a {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgb(22, 22, 22);
+        background: var(--secondary-color);
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
@@ -241,7 +257,8 @@ a {
     }
 
     .nav-list a {
-        font-family: "Quicksand", sans-serif;
+        font-family: "whitneybook";
+        color: var(--secondary-color);
         font-weight: 600;
         font-size: 2rem;
         opacity: 0;
@@ -290,16 +307,16 @@ a {
 
     .nav.active .hamburger::before {
         transform: rotate(135deg);
-        
+
     }
 
     .nav.active .hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
-        
+
     }
 
-    .footer{
+    .footer {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -307,23 +324,25 @@ a {
         padding-bottom: 5px;
     }
 
-    .footer-media img{
+    .footer-media img {
         margin-block: 15px;
     }
-    .foto-texto{
+
+    .foto-texto {
         flex-wrap: wrap;
         height: auto;
         width: auto;
     }
 
-    .descricao p{
+    .descricao p {
         padding-inline: 15px;
         padding-bottom: 15px;
     }
 
-    .foto{
+    .foto {
         margin-top: 15px;
     }
 
 }
+
 /* ------------------------------------------------------------------------------------------ */
