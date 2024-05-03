@@ -41,23 +41,34 @@ function mostrarModalPedido(itens) {
   const modalContent = document.getElementById('pedidoConfirmado');
   let total = 0;
 
-  // Adiciona o cabeçalho em negrito antes da lista de itens
   let conteudoModal = `<b>Seu pedido:</b><br><br>`;
-
-  // Constrói a lista de itens, incluindo o nome e o preço de cada um
-  itens.map(item => {
+  itens.forEach(item => {
       total += parseFloat(item.preco.replace(',', '.'));
       conteudoModal += `${item.nome} - R$${item.preco}<br>`;
-  }).join("");
+  });
 
-  // Adiciona o preço total no final da lista
   conteudoModal += `<br><b>Preço total:</b> R$${total.toFixed(2)}`;
 
-  // Configura o conteúdo do modal e exibe o modal
   modalContent.innerHTML = conteudoModal;
   modal.style.display = 'block';
+
+  // Adiciona o botão para confirmar o pedido e limpar o carrinho
+  const botaoConfirmar = document.createElement('button');
+  botaoConfirmar.textContent = 'Confirmar e limpar carrinho';
+  botaoConfirmar.classList.add('btn', 'btn-success');
+  botaoConfirmar.onclick = function() {
+      limparCarrinho();
+      modal.style.display = 'none';
+      window.location.href = '../home/home.html';  // Substitua 'URL_DA_HOME' pela URL da sua página inicial
+  };
+  
+  modalContent.appendChild(botaoConfirmar);
 }
 
+function limparCarrinho() {
+  localStorage.removeItem('carrinhoItens'); // Remove os itens do carrinho do localStorage
+  document.getElementById('carrinho').innerHTML = "<p>Seu carrinho está vazio!</p>";
+}
 
 function removerItem(nomeItem) {
   let itens = getItensCarrinho();
