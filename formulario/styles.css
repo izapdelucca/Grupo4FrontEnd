@@ -1,0 +1,73 @@
+body {
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+@font-face {
+    font-family: "whitneybook";
+    src: url("../fonts/whitney/whitney-book-webfont.woff2") format("woff2"),
+    url("../fonts/whitney/whitney-book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #ec2b27;
+    --secondary-color: #342d2a;
+    --tertiary-color: #b59153;
+    --txtcolor: #ede9d3;
+    --txtshadow: #ff7979;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.formulario form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="submit"] {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+input[type="submit"] {
+    background-color: #d41b11;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="checkbox"] {
+    width: auto; 
+    height: 20px;
+    margin-right: 400px;
+}
+
+
