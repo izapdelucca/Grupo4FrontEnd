@@ -31,9 +31,9 @@
         </nav>
 
 
-
         <h1>Faça seu cadastro</h1>
         <div class="formulario">
+            <div class="preencher">
             <form action="cadastro" method="post" id="codastroForm">
                 <label for="nome">Nome:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
@@ -46,19 +46,24 @@
 
                 <label for="telefone">Telefone:</label><br>
                 <input type="tel" id="telefone" name="telefone" required><br>
-
+            </div>
+                <div class="comentario">
                 <label for="comentario">Deixe sua sugestão para que possamos melhorar nosso trabalho!</label><br>
                 <textarea id="comentario" name="comentario" rows="7" cols="55"
                     placeholder="Digite seu comentário aqui..."></textarea><br>
+                </div>
                 <div class="div-check-texto">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter" id="newsletter">Desejo receber newsletter</label><br>
                 </div>
-                <input type="checkbox" id="politica_privacidade" name="politica_privacidade" required>
-                <label for="politica_privacidade" id="politica_privacidade">Estou de acordo com a Política de
-                    privacidade.</label><br>
-
+                <div class="div-check-texto">
+                    <input type="checkbox" id="politica_privacidade" name="politica_privacidade" required>
+                    <label for="politica_privacidade" id="politica_privacidade">Estou de acordo com a Política de
+                        privacidade.</label><br>
+                </div>
+                <div class="botao">
                 <input type="submit" value="Enviar">
+            </div>
             </form>
 
         </div>

@@ -22,21 +22,22 @@ body {
 
 .container {
     margin: 0 auto;
-    /* padding: 40px; */
     color: #ffffff;
     padding-bottom: 5px;
 }
 
-label{
-    font-family: "whitneybook";
-    font-size: 1rem;
+.preencher label{
+    display: block;
+    width: 390px; 
 }
 
 .div-check-texto{
     display: flex;
-    width: 421px;
-   
+    justify-content: center;
+    flex-direction: row; 
+    padding-bottom: 20px;  
 }
+
 
 .formulario form {
     display: flex;
@@ -49,6 +50,10 @@ label{
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color:#d41b11
+
 }
 
 input[type="text"],
@@ -64,7 +69,30 @@ input[type="submit"] {
     
 }
 
+.comentario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+textarea {
+    border: none;
+    border-radius: 3px;
+}
+
+.botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 input[type="submit"] {
+    margin-bottom: 60px;
     background-color: #d41b11;
     color: #ffffff;
     border: none;
@@ -75,12 +103,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
     border: 1px solid var(--txtcolor);
     background-color: var(--secondary-color);
+
 }
 
 input[type="checkbox"] {
     width: auto; 
     height: 20px;
-    margin-right: 400px;
+    margin-right: 10px;
 }
 
 .footer {
