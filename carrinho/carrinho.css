@@ -218,7 +218,9 @@ button:hover {
     box-sizing: border-box;
     margin: auto;
 }
-
+.modal p {
+    color: black;
+}
 
 .close {
     color: #292929;
